@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<title>{block:PostTitle}{PostTitle} &middot; {/block:PostTitle}Designer &amp; Engineer &middot; Paul Mederos</title>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="google-site-verification" content="CfwaNdMEzHBBnks5ZjcfE3deVa1r_WHT0U9foPNDybA" />
+        <meta name="description" content="{MetaDescription}" />
+        <meta name="viewport" content="width=device-width">
+        
+		<link href="http://static.paulmederos.com/images/favicon.png" rel="shortcut icon" />
+        <link type="text/css" rel="stylesheet" href="http://static.paulmederos.com/css/tumblr-jan2013.css" />
+        
+		<script type="text/javascript" src="http://use.typekit.com/oee6gsu.js"></script>
+        <script type="text/javascript">
+            try{Typekit.load();}catch(e){}
+        </script>
+	</head>
+	<body>
+	{block:IndexPage}
+		<section class="wrap posts-index">
+			<ul class="posts-list">
+				{block:Posts}
+					<li>
+						{block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}												
+							<p>{Body}</p>
+							{block:More}<a href="{Permalink}" class="read-more">Let's keep reading, shall we <span class="rarr">&rarr;</span></a>{/block:More}
+					</li>
+				{/block:Posts}
+			</ul>
+		</section>
+	{/block:IndexPage} 
+		
+		{block:PermalinkPage} 
+			{block:Posts}
+				<article class="wrap post-text">
+					{block:Text}
+						{block:Title}<h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+						{Body}
+					{/block:Text}
+				</article>
+				
+				{block:Date}
+					<time class="published-date" datetime="{Year}-{MonthNumber}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds} -0500">
+						<span class="published-day">{ShortDayOfWeek}</span>
+						<span class="published-month">{ShortMonth}</span>
+						<span class="published-year">{Year}</span>
+					</time>
+				{/block:Date}
+			{/block:Posts}
+		{/block:PermalinkPage}
+		
+		<footer class="wrap">
+			{block:PermalinkPage} 
+				
+				<a href="/" class="take-me-home">Take me home</a>
+			{/block:PermalinkPage} 
+			
+			{block:Pagination}
+				<div class="pagination">
+					{block:PreviousPage}<a href="{PreviousPage}" id="newer"> &larr; Newer</a>{/block:PreviousPage}&nbsp;&middot;&nbsp;
+					{block:NextPage}<a href="{NextPage}" id="older">Older &rarr;</a>{/block:NextPage}
+					
+				</div>
+			{/block:Pagination}
+		</footer>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        
+	    <script type="text/javascript">
+	      var _gaq = _gaq || [];
+	      _gaq.push(['_setAccount', 'UA-30913790-1']);
+	      _gaq.push(['_trackPageview']);
+	    
+	      (function() {
+	        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	      })();
+	    </script>
+	</body>
+</html>
